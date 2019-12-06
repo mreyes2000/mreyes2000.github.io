@@ -5,9 +5,9 @@ function callFunction(){
   if (!svgtest.empty()){
     svgtest.remove();
   }
+  var something = submitFunction();
 
-
-  d3.csv("https://mreyes2000.github.io/Sound%20Analyzer/20191004_002_LLUFTest_ShiviLaura_C100a_001_audiodata.csv")
+  d3.csv("https://mreyes2000.github.io/Sound%20Analyzer/"+something)
       .row(function(d){ return {time: Number(d.time), amp: Number(d.amp)};})
       .get(function(error,data){
 
@@ -185,5 +185,12 @@ function callFunction(){
         });
 
       });
+  function submitFunction(){
+        var nameValue = document.getElementById("csvFile").value;
+           if(nameValue == null){
+             nameValue = "20191004_002_LLUFTest_ShiviLaura_C100a_001_audiodata.csv";
+           }
+        return nameValue;
+    }
 
 }
