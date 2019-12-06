@@ -7,7 +7,7 @@ function callFunction(){
   }
 
 
-  d3.csv("/Users/llf/Desktop/Sound Analyzer/csvFiles/20191004_002_LLUFTest_ShiviLaura_C100a_001_audiodata.csv")
+  d3.csv("20191004_002_LLUFTest_ShiviLaura_C100a_001_audiodata.csv")
       .row(function(d){ return {time: Number(d.time), amp: Number(d.amp)};})
       .get(function(error,data){
 
