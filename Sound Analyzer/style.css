@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+g.x-axis path{
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+g.y-axis path{
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+}

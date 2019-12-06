@@ -1,0 +1,45 @@
+:root {
+  --main-bg-color: AliceBlue;
+  --main-font-color: gray;
+  --main-font-family: Montserrat;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.flex{
+  text-align: center;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  background-color: var(--main-bg-color);
+  border-bottom: 2px solid var(--main-font-color);
+}
+
+form{
+  font-family: var(--main-font-family);
+  font-size: 30px;
+  color: var(--main-font-color);
+}
+
+button {
+  width: 69%;
+  background-color: var(--main-font-color);
+  border: none;
+  color: var(--main-bg-color);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
