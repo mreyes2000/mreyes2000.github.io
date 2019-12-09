@@ -43,7 +43,7 @@ function myFunction() {
 
     var line = d3.line()
                     .x(function(d,i){ return x(d); })
-                    .y(function(d,i){ return y(equation(d)); })
+                    .y(function(d,i){ if(equation(d) == Infinity){return y(0);} else {return y(equation(d));} })
                     .curve(d3.curveCardinal);
 
     var tangent = d3.line()
