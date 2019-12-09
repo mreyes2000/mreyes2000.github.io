@@ -42,8 +42,8 @@ function myFunction() {
     var xAxis = d3.axisBottom(x);
 
     var line = d3.line()
-                    .x(function(d,i){ return x(d); })
-                    .y(function(d,i){ return y(equation(d)); })
+                    .x(function(d,i){ if(!y(equation(d))== null){return x(d);} })
+                    .y(function(d,i){ if(!y(equation(d))== null){return y(equation(d));} })
                     .curve(d3.curveCardinal);
 
     var tangent = d3.line()
